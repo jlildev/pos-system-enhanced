@@ -1,0 +1,56 @@
+/* POS Main Styles - Import all modules */
+
+@import './pos-variables.css';
+@import './pos-header.css';
+@import './pos-search.css';
+@import './pos-cart.css';
+@import './pos-products.css';
+@import './pos-drafts.css';
+@import './pos-payment.css';
+@import './pos-notification.css';
+@import './pos-keyboard.css';
+
+/* Global POS Styles */
+.pos-wrapper-enhanced {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--neutral-50) 0%, #e0f2fe 100%);
+}
+
+.pos-container-enhanced {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: var(--space-lg);
+}
+
+.pos-main-enhanced {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: var(--space-lg);
+    align-items: start;
+}
+
+.pos-cart-wrapper {
+    position: sticky;
+    top: 8rem;
+    max-height: calc(100vh - 9rem);
+}
+
+@media (max-width: 1280px) {
+    .pos-main-enhanced {
+        grid-template-columns: 1fr;
+    }
+    .pos-cart-wrapper {
+        position: relative;
+        top: 0;
+        max-height: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .pos-container-enhanced {
+        padding: var(--space-md);
+    }
+    .pos-main-enhanced {
+        gap: var(--space-md);
+    }
+}
